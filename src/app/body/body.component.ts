@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class BodyComponent {
   posts = [
     {
-      photo: 'https://via.placeholder.com/150',
+      photo: './assets/hopi-hari.jpg',
       name: 'Post 1',
       date: new Date(),
       value: 100,
