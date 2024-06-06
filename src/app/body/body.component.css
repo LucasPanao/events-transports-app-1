@@ -14,3 +14,14 @@ body {
   display: flex;
   justify-content: center;
 }
+
+mat-card {
+  width: 100%; 
+  max-width: 300px; 
+  margin: 8px; 
+}
+
+mat-card img {
+  height: 300px; 
+  object-fit: cover; 
+}
