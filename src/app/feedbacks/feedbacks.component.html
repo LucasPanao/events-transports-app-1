@@ -1,1 +1,13 @@
-<p>feedbacks works!</p>
+<div class="feedback-grid">
+  <mat-card class="feedback-card" *ngFor="let feedback of feedbacks">
+    <mat-card-header>
+      <div mat-card-avatar class="feedback-avatar">
+        <img [src]="feedback.photo" alt="Foto de {{ feedback.name }}">
+      </div>
+      <mat-card-title>{{ feedback.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ feedback.text }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
