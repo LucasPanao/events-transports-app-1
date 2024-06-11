@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -22,6 +24,8 @@ import { AboutComponent } from './menu/about/about.component';
 import { ContactComponent } from './menu/contact/contact.component';
 import { FaqComponent } from './menu/faq/faq.component';
 import { environment } from '../environment/environment';
+import { PostComponent } from './post/post.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,8 @@ import { environment } from '../environment/environment';
     FeedbacksComponent,
     AboutComponent,
     ContactComponent,
-    FaqComponent
+    FaqComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -43,11 +48,14 @@ import { environment } from '../environment/environment';
     MatCardModule,
     MatIconModule,
     MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

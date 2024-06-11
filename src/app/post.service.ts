@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 interface Post {
   photo: string;
@@ -11,14 +11,27 @@ interface Post {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PostService {
-
-  constructor(private firestore: AngularFirestore) { }
+  constructor(private firestore: AngularFirestore) {}
 
   getPosts(): Observable<Post[]> {
-    return this.firestore.collection<Post>('/posts').valueChanges();
+    return this.firestore
+      .collection<Post>('/posts')
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as Post;
+            const id = a.payload.doc.id;
+            if (data.date && data.date.toDate) {
+              data.date = data.date.toDate();
+            }
+            return { id, ...data };
+          })
+        )
+      );
   }
 
   addPost(post: Post) {
