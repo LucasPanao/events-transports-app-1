@@ -1,67 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.css'],
 })
-export class BodyComponent {
-  posts = [
-    {
-      photo: './assets/alok.png',
-      name: 'Post 1',
-      date: new Date(),
-      value: 100,
-      info: 'Additional information about Post 1',
-    },
-    {
-      photo: './assets/luan.jpg',
-      name: 'Post 1',
-      date: new Date(),
-      value: 100,
-      info: 'Additional information about Post 1',
-    },
-    {
-      photo: './assets/anitta.png',
-      name: 'Post 1',
-      date: new Date(),
-      value: 100,
-      info: 'Additional information about Post 1',
-    },
-    {
-      photo: './assets/luisa.jpg',
-      name: 'Post 1',
-      date: new Date(),
-      value: 100,
-      info: 'Additional information about Post 1',
-    },
-    {
-      photo: './assets/alok.png',
-      name: 'Post 1',
-      date: new Date(),
-      value: 100,
-      info: 'Additional information about Post 1',
-    },
-    {
-      photo: './assets/luan.jpg',
-      name: 'Post 1',
-      date: new Date(),
-      value: 100,
-      info: 'Additional information about Post 1',
-    },
-    {
-      photo: './assets/anitta.png',
-      name: 'Post 1',
-      date: new Date(),
-      value: 100,
-      info: 'Additional information about Post 1',
-    },
-    {
-      photo: './assets/luisa.jpg',
-      name: 'Post 1',
-      date: new Date(),
-      value: 100,
-      info: 'Additional information about Post 1',
-    }
-  ];
+export class BodyComponent implements OnInit {
+  posts: any[] = [];
+
+  constructor(private postService: PostService) {}
+
+  ngOnInit() {
+    this.postService.getPosts().subscribe((data: any) => {
+      this.posts = data;
+    });
+  }
 }
