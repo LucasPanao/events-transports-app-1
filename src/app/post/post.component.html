@@ -1,0 +1,61 @@
+<div class="form-container">
+  <h2>Incluir novo Post</h2>
+  <form class="form" (ngSubmit)="addPost()">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>URL da Foto:</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="newPost.photo"
+        name="photo"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Nome:</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="newPost.name"
+        name="name"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Data:</mat-label>
+      <input
+        matInput
+        type="date"
+        [(ngModel)]="newPost.date"
+        name="date"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Valor:</mat-label>
+      <input
+        matInput
+        type="number"
+        [(ngModel)]="newPost.value"
+        name="value"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Info:</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="newPost.info"
+        name="info"
+        required
+      />
+    </mat-form-field>
+    <div class="button-container">
+      <button mat-raised-button type="submit">Adicionar</button>
+      <button mat-raised-button type="button" (click)="resetForm()">
+        Limpar
+      </button>
+    </div>
+  </form>
+</div>
