@@ -34,6 +34,12 @@ export class PostService {
       );
   }
 
+  getPostsByMonth(month: number): Observable<Post[]> {
+    return this.getPosts().pipe(
+      map(posts => posts.filter(post => post.date.getMonth() === month))
+    );
+  }
+
   addPost(post: Post) {
     return this.firestore.collection('/posts').add(post);
   }
