@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Detalhes da Excursão</h1>
+<div mat-dialog-content>
+  <p><strong>Data de Chegada:</strong> {{data.dateArrival | date: 'dd/MM/yyyy'}}</p>
+  <p><strong>Data de Saída:</strong> {{data.dateDeparture | date: 'dd/MM/yyyy'}}</p>
+  <p><strong>Horários:</strong> {{data.schedules}}</p>
+  <p><strong>Cidades:</strong> {{data.cities}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Fechar</button>
+  <a mat-button [href]="data.whatsappLink" target="_blank" color="primary">Contato via WhatsApp</a>
+</div>

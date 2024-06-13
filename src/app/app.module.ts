@@ -26,6 +26,9 @@ import { FaqComponent } from './menu/faq/faq.component';
 import { environment } from '../environment/environment';
 import { PostComponent } from './post/post.component';
 import { FormsModule } from '@angular/forms';
+import { ExcursionDetailsModalComponent } from './excursion-details-modal/excursion-details-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     ContactComponent,
     FaqComponent,
-    PostComponent
+    PostComponent,
+    ExcursionDetailsModalComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +55,7 @@ import { FormsModule } from '@angular/forms';
     MatExpansionModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
