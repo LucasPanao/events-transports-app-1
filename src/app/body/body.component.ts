@@ -16,4 +16,8 @@ export class BodyComponent implements OnInit {
       this.posts = data;
     });
   }
+
+  showDetails(post: any) {
+    
+  }
 }
