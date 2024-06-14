@@ -1,5 +1,5 @@
 <div *ngFor="let monthYear of monthYearNames">
-  <h1> {{ monthYear }} </h1>
+  <h1 class="month-year-header"> {{ monthYear }} </h1>
   <div class="grid-container">
     <div class="grid-item" *ngFor="let post of groupedPosts[monthYear]">
       <mat-card>

@@ -47,7 +47,7 @@ export class BodyComponent implements OnInit {
       const month = post.date.getMonth() + 1;
       const year = post.date.getFullYear();
       const monthName = convertMonthName([month])[0]; 
-      const monthYear = `${year}-${monthName}`;
+      const monthYear = `${monthName} - ${year}`;
 
       if (!this.groupedPosts[monthYear]) {
         this.groupedPosts[monthYear] = [];
@@ -57,8 +57,8 @@ export class BodyComponent implements OnInit {
 
     this.monthYearNames = [...new Set(Object.keys(this.groupedPosts))];
     this.monthYearNames.sort((a, b) => {
-      const [yearA, monthA] = a.split('-');
-      const [yearB, monthB] = b.split('-');
+      const [monthA, yearA] = a.split(' - ');
+      const [monthB, yearB] = b.split(' - ');
       return yearA !== yearB ? +yearA - +yearB: months.indexOf(monthA) - months.indexOf(monthB);
     });
   }

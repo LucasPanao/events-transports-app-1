@@ -40,3 +40,26 @@ mat-card img {
   height: 300px;
   object-fit: cover;
 }
+
+.month-year-container {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.month-year-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.month-year-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
