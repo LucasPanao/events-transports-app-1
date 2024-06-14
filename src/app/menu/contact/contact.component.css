@@ -1,0 +1,19 @@
+.contact-container {
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .contact-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .contact-button {
+    font-size: 24px;
+    padding: 20px;
+    width: 300px;
+  }
+  
