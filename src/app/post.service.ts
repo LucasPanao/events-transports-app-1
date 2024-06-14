@@ -1,14 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable, map } from 'rxjs';
-
-interface Post {
-  photo: string;
-  name: string;
-  date: any;
-  value: number;
-  info: string;
-}
+import { Post } from './Iposts';
 
 @Injectable({
   providedIn: 'root',

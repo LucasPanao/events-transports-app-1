@@ -1,14 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
+import { Post } from '../Iposts';
 
-interface Post {
-  id?: string; 
-  photo: string;
-  name: string;
-  date: any;
-  value: number;
-  info: string;
-}
+
 
 @Component({
   selector: 'app-post',
@@ -23,7 +17,11 @@ export class PostComponent implements OnInit {
     name: '',
     date: '',
     value: 0,
-    info: ''
+    info: '',
+    dateArrival: new Date(),
+    dateDeparture: new Date(),
+    schedules: '',
+    cities: ''
   };
   editMode: boolean = false;
   currentPostId?: string;
@@ -55,7 +53,11 @@ export class PostComponent implements OnInit {
       name: '',
       date: '',
       value: 0,
-      info: ''
+      info: '',
+      dateArrival: new Date(),
+      dateDeparture: new Date(),
+      schedules: '',
+      cities: ''
     };
     this.editMode = false;
     this.currentPostId = undefined;
