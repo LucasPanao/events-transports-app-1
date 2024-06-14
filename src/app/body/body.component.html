@@ -1,18 +1,21 @@
-<div class="grid-container">
-  <div class="grid-item" *ngFor="let post of posts">
-    <mat-card>
-      <img mat-card-image [src]="post.photo" alt="{{ post.name }}">
-      <mat-card-header>
-        <div class="header-container">
-          <mat-card-title>{{ post.name }}</mat-card-title>
-          <mat-card-subtitle>{{ post.date | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
-        </div>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="post-info">Valor: {{ post.value | currency: 'BRL' }}</p>
-        <p class="post-info">{{ post.info }}</p>
-      </mat-card-content>
-      <button mat-raised-button color="primary" (click)="showDetails(post)">+Informações</button>
-    </mat-card>
+<div *ngFor="let monthYear of monthYearNames">
+  <h1> {{ monthYear }} </h1>
+  <div class="grid-container">
+    <div class="grid-item" *ngFor="let post of groupedPosts[monthYear]">
+      <mat-card>
+        <img mat-card-image [src]="post.photo" alt="{{ post.name }}">
+        <mat-card-header>
+          <div class="header-container">
+            <mat-card-title>{{ post.name }}</mat-card-title>
+            <mat-card-subtitle>{{ post.date | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+          </div>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="post-info">Valor: {{ post.value | currency: 'BRL' }}</p>
+          <p class="post-info">{{ post.info }}</p>
+        </mat-card-content>
+        <button mat-raised-button color="primary" (click)="showDetails(post)">+Informações</button>
+      </mat-card>
+    </div>
   </div>
 </div>

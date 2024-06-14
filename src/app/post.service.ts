@@ -36,7 +36,7 @@ export class PostService {
 
   getPostsByMonth(month: number): Observable<Post[]> {
     return this.getPosts().pipe(
-      map(posts => posts.filter(post => post.date.getMonth() === month))
+      map(posts => posts.filter(post => post.date.getMonth() + 1 === month))
     );
   }
 
