@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable, map } from 'rxjs';
-import { Post } from './Iposts';
+import { Post } from './IPosts';
 
 @Injectable({
   providedIn: 'root',
