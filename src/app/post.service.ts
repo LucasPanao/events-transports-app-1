@@ -34,6 +34,7 @@ export class PostService {
   }
 
   addPost(post: Post) {
+    post.date.setHours(post.date.getHours() + 7)
     return this.firestore.collection('/posts').add(post);
   }
 
