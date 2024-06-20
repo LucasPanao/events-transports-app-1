@@ -6,7 +6,8 @@ export interface Post {
     value: number;
     info: string;
     dateArrival: Date;
-    dateDeparture: Date;
-    schedules: string;
-    cities: string;
+    scheduleSantos: string;
+    schedulePraiaGrande: string;
+    scheduleSaoVicente: string;
+    scheduleCubatao: string;
   }

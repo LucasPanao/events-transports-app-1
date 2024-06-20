@@ -19,9 +19,10 @@ export class PostComponent implements OnInit {
     value: 0,
     info: '',
     dateArrival: new Date(),
-    dateDeparture: new Date(),
-    schedules: '',
-    cities: ''
+    scheduleSantos: '',
+    schedulePraiaGrande: '',
+    scheduleSaoVicente: '',
+    scheduleCubatao: ''
   };
   editMode: boolean = false;
   currentPostId?: string;
@@ -55,9 +56,10 @@ export class PostComponent implements OnInit {
       value: 0,
       info: '',
       dateArrival: new Date(),
-      dateDeparture: new Date(),
-      schedules: '',
-      cities: ''
+      scheduleSantos: '',
+      schedulePraiaGrande: '',
+      scheduleSaoVicente: '',
+      scheduleCubatao: ''
     };
     this.editMode = false;
     this.currentPostId = undefined;

@@ -3,6 +3,7 @@ import { PostService } from '../post.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ExcursionDetailsModalComponent } from '../excursion-details-modal/excursion-details-modal.component';
 import { convertMonthName, months } from '../functions';
+import { Post } from '../IPosts';
 
 @Component({
   selector: 'app-body',
@@ -24,15 +25,16 @@ export class BodyComponent implements OnInit {
     });
   }
 
-  showDetails(post: any): void {
+  showDetails(post: Post): void {
     const dialogRef = this.dialog.open(ExcursionDetailsModalComponent, {
       width: '400px',
       data: {
+        name: post.name,
         dateArrival: post.dateArrival,
-        dateDeparture: post.dateDeparture,
-        schedules: post.schedules,
-        cities: post.cities,
-        whatsappLink: `https://wa.me/55${post.whatsappNumber}`,
+        scheduleSantos: post.scheduleSantos,
+        schedulePraiaGrande: post.schedulePraiaGrande,
+        scheduleSaoVicente: post.scheduleSaoVicente,
+        scheduleCubatao: post.scheduleCubatao
       },
     });
 

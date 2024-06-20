@@ -61,30 +61,39 @@
       />
     </mat-form-field>
     <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Data de Partida:</mat-label>
-      <input
-        matInput
-        type="date"
-        [(ngModel)]="newPost.dateDeparture"
-        name="dateDeparture"
-      />
-    </mat-form-field>
-    <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Horários:</mat-label>
+      <mat-label>Horário de Santos:</mat-label>
       <input
         matInput
         type="text"
-        [(ngModel)]="newPost.schedules"
-        name="schedules"
+        [(ngModel)]="newPost.scheduleSantos"
+        name="scheduleSantos"
       />
     </mat-form-field>
     <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Cidades:</mat-label>
+      <mat-label>Horário de Praia Grande:</mat-label>
       <input
         matInput
         type="text"
-        [(ngModel)]="newPost.cities"
-        name="cities"
+        [(ngModel)]="newPost.schedulePraiaGrande"
+        name="schedulePraiaGrande"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Horário de São Vicente:</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="newPost.scheduleSaoVicente"
+        name="scheduleSaoVicente"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Horário de Cubatão:</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="newPost.scheduleCubatao"
+        name="scheduleCubatao"
       />
     </mat-form-field>
     <div class="button-container">

@@ -1,11 +1,12 @@
-<h1 mat-dialog-title>Detalhes da Excursão</h1>
+<h1 mat-dialog-title>{{data.name}}</h1>
 <div mat-dialog-content>
-  <p><strong>Data de Chegada:</strong> {{data.dateArrival | date: 'dd/MM/yyyy'}}</p>
-  <p><strong>Data de Saída:</strong> {{data.dateDeparture | date: 'dd/MM/yyyy'}}</p>
-  <p><strong>Horários:</strong> {{data.schedules}}</p>
-  <p><strong>Cidades:</strong> {{data.cities}}</p>
+  <p><strong>Data do Evento:</strong> {{data.dateArrival | date: 'dd/MM/yyyy'}}</p>
+  <p><strong>Horários de Santos:</strong> {{data.scheduleSantos}}</p>
+  <p><strong>Horários de Praia Grande:</strong> {{data.schedulePraiaGrande}}</p>
+  <p><strong>Horários de São Vicente:</strong> {{data.scheduleSaoVicente}}</p>
+  <p><strong>Horários de Cubatão:</strong> {{data.scheduleCubatao}}</p>
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Fechar</button>
-  <a mat-button [href]="data.whatsappLink" target="_blank" color="primary">Contato via WhatsApp</a>
+  <a mat-button href="https://wa.me/55XXX" target="_blank" color="primary">Contato via WhatsApp</a>
 </div>
