@@ -1,10 +1,12 @@
 <h1 mat-dialog-title>{{data.name}}</h1>
 <div mat-dialog-content>
-  <p><strong>Data do Evento:</strong> {{data.dateArrival | date: 'dd/MM/yyyy'}}</p>
-  <p><strong>Horários de Santos:</strong> {{data.scheduleSantos}}</p>
-  <p><strong>Horários de Praia Grande:</strong> {{data.schedulePraiaGrande}}</p>
-  <p><strong>Horários de São Vicente:</strong> {{data.scheduleSaoVicente}}</p>
-  <p><strong>Horários de Cubatão:</strong> {{data.scheduleCubatao}}</p>
+  <p><strong>Data:</strong> {{data.dateArrival | date: 'dd/MM/yyyy'}} ( {{weekdays[this.convertDate(data.dateArrival)]}} )</p>
+  <h3 mat-dialog-title>Horários e Locais de Embarque: </h3>
+  <p><strong>Praia Grande - Terminal Tude Bastos: </strong> {{data.schedulePraiaGrande}}</p>
+  <p><strong>São Vicente - Smart Fit (Pres. Wilson): </strong> {{data.scheduleSaoVicente}}</p>
+  <p><strong>Santos - Posto Portal (Santa Casa): </strong> {{data.scheduleSantos}}</p>
+  <p><strong>Cubatão - Casas Bahia(9 de Abril): </strong> {{data.scheduleCubatao}}</p>
+  <p><strong>Retorno: </strong> {{data.scheduleReturn}}</p>
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Fechar</button>

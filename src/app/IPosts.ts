@@ -10,4 +10,5 @@ export interface Post {
     schedulePraiaGrande: string;
     scheduleSaoVicente: string;
     scheduleCubatao: string;
+    scheduleReturn: string;
   }

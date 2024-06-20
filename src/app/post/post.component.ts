@@ -22,7 +22,8 @@ export class PostComponent implements OnInit {
     scheduleSantos: '',
     schedulePraiaGrande: '',
     scheduleSaoVicente: '',
-    scheduleCubatao: ''
+    scheduleCubatao: '',
+    scheduleReturn: ''
   };
   editMode: boolean = false;
   currentPostId?: string;
@@ -59,7 +60,8 @@ export class PostComponent implements OnInit {
       scheduleSantos: '',
       schedulePraiaGrande: '',
       scheduleSaoVicente: '',
-      scheduleCubatao: ''
+      scheduleCubatao: '',
+      scheduleReturn: ''
     };
     this.editMode = false;
     this.currentPostId = undefined;

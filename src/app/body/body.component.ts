@@ -34,7 +34,8 @@ export class BodyComponent implements OnInit {
         scheduleSantos: post.scheduleSantos,
         schedulePraiaGrande: post.schedulePraiaGrande,
         scheduleSaoVicente: post.scheduleSaoVicente,
-        scheduleCubatao: post.scheduleCubatao
+        scheduleCubatao: post.scheduleCubatao,
+        scheduleReturn: post.scheduleReturn
       },
     });
 
