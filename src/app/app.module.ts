@@ -29,6 +29,8 @@ import { FormsModule } from '@angular/forms';
 import { ExcursionDetailsModalComponent } from './excursion-details-modal/excursion-details-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AdminComponent } from './admin/admin.component';
+import { DeletePostComponent } from './delete-post/delete-post.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { AdminComponent } from './admin/admin.component';
     FaqComponent,
     PostComponent,
     ExcursionDetailsModalComponent,
-    AdminComponent
+    AdminComponent,
+    DeletePostComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,

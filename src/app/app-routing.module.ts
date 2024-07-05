@@ -8,6 +8,7 @@ import { ContactComponent } from './menu/contact/contact.component';
 import { FaqComponent } from './menu/faq/faq.component';
 import { PostComponent } from './post/post.component';
 import { AdminComponent } from './admin/admin.component';
+import { DeletePostComponent } from './delete-post/delete-post.component';
 
 const routes: Routes = [
   { path: '', component: BodyComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'posts', component: PostComponent }
+  { path: 'posts', component: PostComponent },
+  { path: 'delete-posts', component: DeletePostComponent }
 ];
 
 @NgModule({

@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding-top: 64px; /* mat-toolbar */
+    box-sizing: border-box;
+  }
+  
+  .post-info p {
+    margin-bottom: 5px;
+  }
+  
+  .post-info p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.05);
+  }
+  
+  mat-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 8px;
+  }
+  
+  mat-card img {
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .month-year-container {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .month-year-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .month-year-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    max-width: 600px;
+  }
+  

@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Confirmar Deleção</h1>
+<div mat-dialog-content>
+  <p>Tem certeza que deseja deletar o evento: {{ data.postName }}?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Não</button>
+  <button mat-button color="warn" (click)="onYesClick()">Sim</button>
+</div>
