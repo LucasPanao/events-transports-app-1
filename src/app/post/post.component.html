@@ -1,5 +1,5 @@
 <div class="form-container">
-  <h2>Incluir novo Post</h2>
+  <h2>{{ editMode ? 'Editar Post' : 'Incluir novo Post' }}</h2>
   <form class="form" (ngSubmit)="addPost()">
     <mat-form-field appearance="fill" class="full-width">
       <mat-label>URL da Foto:</mat-label>
