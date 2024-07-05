@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PostService } from '../post.service';
 import { Post } from '../IPosts';
+import { convertDateToString } from '../functions';
 
 @Component({
   selector: 'app-edit-post',
@@ -31,6 +32,7 @@ export class EditPostComponent {
 
   handlePost(post: Post) {
     this.selected = true;
+    post.date = convertDateToString(post.date)
     this.selectedPost = post;
   }
 
