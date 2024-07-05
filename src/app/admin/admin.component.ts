@@ -16,7 +16,7 @@ export class AdminComponent {
         this.router.navigate(['/posts']);
         break;
       case 'editar-post':
-        this.router.navigate(['/posts-editar']);
+        this.router.navigate(['/edit-posts']);
         break;
       case 'excluir-post':
         this.router.navigate(['/delete-posts']);
