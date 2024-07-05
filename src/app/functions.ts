@@ -8,7 +8,6 @@ export function convertMonthName(postsMonths: any[]): string[] {
     let nameM: string = hasMonthName(numberM);
     monthName.push(nameM);
   });
-  console.log(monthName);
   return monthName;
 }
 

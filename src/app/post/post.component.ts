@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
 import { Post } from '../IPosts';
 
@@ -12,7 +12,7 @@ import { Post } from '../IPosts';
 
 export class PostComponent implements OnInit {
   posts: Post[] = [];
-  newPost: Post = {
+  @Input() newPost: Post = {
     photo: '',
     name: '',
     date: '',

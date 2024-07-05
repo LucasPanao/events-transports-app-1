@@ -1,10 +1,16 @@
-<div class="search-container">
+<div *ngIf="!selected">
+  <div class="search-container">
     <mat-form-field appearance="fill">
       <mat-label>Pesquisar Evento</mat-label>
-      <input matInput [(ngModel)]="searchQuery" (ngModelChange)="filterPosts()" placeholder="Digite o nome do evento">
+      <input
+        matInput
+        [(ngModel)]="searchQuery"
+        (ngModelChange)="filterPosts()"
+        placeholder="Digite o nome do evento"
+      />
     </mat-form-field>
   </div>
-  
+
   <div class="grid-container">
     <div class="grid-item" *ngFor="let post of filteredPosts">
       <mat-card>
@@ -12,19 +18,22 @@
         <mat-card-header>
           <div class="header-container">
             <mat-card-title>{{ post.name }}</mat-card-title>
-            <mat-card-subtitle>{{ post.date | date: 'dd/MM/yyyy' }}</mat-card-subtitle>
+            <mat-card-subtitle>{{
+              post.date | date : "dd/MM/yyyy"
+            }}</mat-card-subtitle>
           </div>
         </mat-card-header>
         <mat-card-content>
-          <p class="post-info">Valor: {{ post.value | currency: 'BRL' }}</p>
+          <p class="post-info">Valor: {{ post.value | currency : "BRL" }}</p>
           <p class="post-info">{{ post.info }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button color="primary" (click)="(post)">
+          <button mat-raised-button color="primary" (click)="handlePost(post)">
             EDITAR
           </button>
         </mat-card-actions>
       </mat-card>
     </div>
   </div>
-  
+</div>
+<app-post *ngIf="selected" [newPost]="selectedPost"></app-post>

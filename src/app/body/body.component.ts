@@ -45,10 +45,6 @@ export class BodyComponent implements OnInit {
         scheduleReturn: post.scheduleReturn
       },
     });
-
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-    });
   }
 
   handleMonth(): void {

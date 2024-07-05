@@ -11,6 +11,8 @@ export class EditPostComponent {
   posts: Post[] = [];
   filteredPosts: Post[] = [];
   searchQuery: string = '';
+  selected = false;
+  selectedPost: any;
 
   constructor(private postService: PostService) {}
 
@@ -25,6 +27,11 @@ export class EditPostComponent {
     this.filteredPosts = this.posts.filter(post => 
       post.name.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
+  }
+
+  handlePost(post: Post) {
+    this.selected = true;
+    this.selectedPost = post;
   }
 
 }
