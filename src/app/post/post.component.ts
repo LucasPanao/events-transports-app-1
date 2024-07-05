@@ -11,7 +11,6 @@ import { Post } from '../IPosts';
 })
 
 export class PostComponent implements OnInit {
-  posts: Post[] = [];
   @Input() newPost: Post = {
     photo: '',
     name: '',
@@ -25,8 +24,9 @@ export class PostComponent implements OnInit {
     scheduleCubatao: '',
     scheduleReturn: ''
   };
-  editMode: boolean = false;
-  currentPostId?: string;
+  @Input() editMode: boolean = false;
+  @Input() currentPostId?: string;
+  posts: Post[] = [];
 
   constructor(private postService: PostService) {}
 
@@ -38,6 +38,7 @@ export class PostComponent implements OnInit {
 
   addPost() {
     const post = { ...this.newPost, date: new Date(this.newPost.date) };
+    post.date.setHours(post.date.getHours() + 7)
     if (this.editMode && this.currentPostId) {
       this.postService.updatePost(this.currentPostId, post).then(() => {
         this.resetForm();

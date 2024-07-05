@@ -36,4 +36,10 @@
     </div>
   </div>
 </div>
-<app-post *ngIf="selected" [newPost]="selectedPost"></app-post>
+
+<app-post
+  *ngIf="selected"
+  [newPost]="selectedPost"
+  [editMode]="true"
+  [currentPostId]="selectedPost.id"
+></app-post>
