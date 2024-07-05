@@ -9,6 +9,7 @@ import { FaqComponent } from './menu/faq/faq.component';
 import { PostComponent } from './post/post.component';
 import { AdminComponent } from './admin/admin.component';
 import { DeletePostComponent } from './delete-post/delete-post.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 const routes: Routes = [
   { path: '', component: BodyComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'posts', component: PostComponent },
-  { path: 'delete-posts', component: DeletePostComponent }
+  { path: 'delete-posts', component: DeletePostComponent },
+  { path: 'edit-posts', component: EditPostComponent }
 ];
 
 @NgModule({

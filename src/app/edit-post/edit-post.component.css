@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding-top: 64px; /* mat-toolbar */
+    box-sizing: border-box;
+  }
+  
+  .post-info p {
+    margin-bottom: 5px;
+  }
+  
+  .post-info p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.05);
+  }
+  
+  mat-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 8px;
+  }
+  
+  mat-card img {
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    max-width: 600px;
+  }
+  

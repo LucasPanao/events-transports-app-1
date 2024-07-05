@@ -15,6 +15,8 @@ export class BodyComponent implements OnInit {
   groupedPosts: { [key: string]: any[] } = {};
   monthName: string[] = [];
   monthYearNames: string[] = [];
+  isLoading: boolean = true;
+  errorMessage: string = '';
 
   constructor(public dialog: MatDialog, private postService: PostService) {}
 
@@ -22,6 +24,11 @@ export class BodyComponent implements OnInit {
     this.postService.getPosts().subscribe((data: any) => {
       this.posts = data;
       this.handleMonth();
+      this.isLoading = false;
+    },
+    (error) => {
+      this.errorMessage = 'Ocorreu um erro ao carregar os eventos. Por favor, tente novamente mais tarde.';
+      this.isLoading = false;
     });
   }
 
