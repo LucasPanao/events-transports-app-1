@@ -106,7 +106,7 @@
       />
     </mat-form-field>
     <div class="button-container">
-      <button mat-raised-button type="submit">Adicionar</button>
+      <button mat-raised-button type="submit">{{ editMode ? 'Editar' : 'Adicionar' }}</button>
       <button mat-raised-button type="button" (click)="resetForm()">
         Limpar
       </button>
