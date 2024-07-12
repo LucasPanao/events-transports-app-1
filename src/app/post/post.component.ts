@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
 import { Post } from '../IPosts';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 
 
@@ -28,7 +29,7 @@ export class PostComponent implements OnInit {
   @Input() currentPostId?: string;
   posts: Post[] = [];
 
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService, private _snackBar: MatSnackBar) {}
 
   ngOnInit() {
     this.postService.getPosts().subscribe((data) => {
@@ -42,10 +43,16 @@ export class PostComponent implements OnInit {
     if (this.editMode && this.currentPostId) {
       this.postService.updatePost(this.currentPostId, post).then(() => {
         this.resetForm();
+        this._snackBar.open('Evento editado com sucesso','',{
+          duration: 2000
+        });
       });
     } else {
       this.postService.addPost(post).then(() => {
         this.resetForm();
+        this._snackBar.open('Evento incluído com sucesso','',{
+          duration: 2000
+        });
       });
     }
   }
