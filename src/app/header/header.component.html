@@ -1,11 +1,16 @@
 <mat-toolbar color="primary" class="header-toolbar">
-  <a mat-button routerLink="/">Kess Eventos e Excursões</a>
+  <button mat-icon-button (click)="toggleMenu()" aria-label="Menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a mat-button routerLink="/" class="logo">Kess Eventos e Excursões</a>
   <span class="spacer"></span>
-  <a mat-button routerLink="/">Excursões</a>
-  <a mat-button routerLink="/photos">Fotos</a>
-  <a mat-button routerLink="/feedbacks">Feedbacks</a>
-  <a mat-button routerLink="/about">Sobre</a>
-  <a mat-button routerLink="/contact">Contato</a>
-  <a mat-button routerLink="/faq">FAQ</a>
-  <a mat-button routerLink="/admin">Admin</a>
+  <div class="menu-items" [ngClass]="{'menu-open': menuOpen}">
+    <a mat-button routerLink="/" (click)="closeMenu()">Excursões</a>
+    <a mat-button routerLink="/photos" (click)="closeMenu()">Fotos</a>
+    <a mat-button routerLink="/feedbacks" (click)="closeMenu()">Feedbacks</a>
+    <a mat-button routerLink="/about" (click)="closeMenu()">Sobre</a>
+    <a mat-button routerLink="/contact" (click)="closeMenu()">Contato</a>
+    <a mat-button routerLink="/faq" (click)="closeMenu()">FAQ</a>
+    <a mat-button routerLink="/admin" (click)="closeMenu()">Admin</a>
+  </div>
 </mat-toolbar>
