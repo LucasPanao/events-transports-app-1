@@ -1,9 +1,42 @@
-<div class="admin-container">
+<div *ngIf="!accessGranted">
+  <h2>Proteção por Senha</h2>
+  <form (ngSubmit)="checkPassword()">
+    <label for="password">Digite a senha:</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="enteredPassword"
+      name="password"
+    />
+    <button type="submit">Entrar</button>
+  </form>
+</div>
+
+<div *ngIf="accessGranted">
+  <div class="admin-container">
     <h1 class="admin-title">Painel Administrativo</h1>
     <div class="admin-buttons">
-      <button mat-raised-button class="admin-button primary" (click)="navigateTo('incluir-post')">Incluir Post</button>
-      <button mat-raised-button class="admin-button accent" (click)="navigateTo('editar-post')">Editar Post</button>
-      <button mat-raised-button class="admin-button warn" (click)="navigateTo('excluir-post')">Excluir Post</button>
+      <button
+        mat-raised-button
+        class="admin-button primary"
+        (click)="navigateTo('incluir-post')"
+      >
+        Incluir Post
+      </button>
+      <button
+        mat-raised-button
+        class="admin-button accent"
+        (click)="navigateTo('editar-post')"
+      >
+        Editar Post
+      </button>
+      <button
+        mat-raised-button
+        class="admin-button warn"
+        (click)="navigateTo('excluir-post')"
+      >
+        Excluir Post
+      </button>
     </div>
   </div>
-  
+</div>

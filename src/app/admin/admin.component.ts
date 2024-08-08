@@ -10,6 +10,18 @@ export class AdminComponent {
 
   constructor(private router: Router) {}
 
+  correctPassword = 'kess1234';
+  enteredPassword = '';
+  accessGranted = false;
+
+  checkPassword() {
+    if (this.enteredPassword === this.correctPassword) {
+      this.accessGranted = true;
+    } else {
+      alert('Senha incorreta!');
+    }
+  }
+
   navigateTo(route: string): void {
     switch (route) {
       case 'incluir-post':
