@@ -17,6 +17,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
   padding: 16px;
+  justify-content: center; /* Centraliza os cards */
 }
 
 .grid-item {
@@ -33,7 +34,7 @@ body {
 mat-card {
   width: 100%;
   max-width: 300px;
-  margin: 8px;
+  margin: 8px auto;
 }
 
 mat-card img {
@@ -80,4 +81,16 @@ mat-card img {
 .spinner-container mat-spinner {
   width: 50px;
   height: 50px;
+}
+
+/* Centralizar os cards em dispositivos móveis */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Um card por linha */
+    padding: 8px; /* Reduzir o padding em dispositivos menores */
+  }
+  
+  mat-card {
+    max-width: 100%; /* Permitir que o card ocupe toda a largura disponível */
+  }
 }
