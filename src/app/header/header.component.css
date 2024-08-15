@@ -13,7 +13,6 @@
   display: block;
   font-size: 1em;
   font-weight: bold;
-  text-transform: uppercase;
   color: white;
 }
 
@@ -27,18 +26,17 @@ button[mat-icon-button] {
 
 .menu-items {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
   align-items: center;
 }
 
 .menu-items a {
-  display: block; 
   color: white;
-  padding: 10px 15px;
+  padding: 31px 20px;
   text-decoration: none;
-  border-radius: 20px;
-  margin: 5px 0;
   transition: background-color 0.3s, color 0.3s;
+  flex-grow: 1; 
+  text-align: center; 
 }
 
 .menu-items a:hover {

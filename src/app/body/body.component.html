@@ -2,6 +2,11 @@
   <mat-spinner></mat-spinner>
 </div>
 
+<div class="banner-container">
+  <img src="assets/anitta-banner-2.jpg" alt="Banner" class="banner-img">
+</div>
+
+
 <div *ngIf="!isLoading && posts.length > 0"></div>
 <div *ngFor="let monthYear of monthYearNames">
   <h1 class="month-year-header">{{ monthYear }}</h1>
@@ -22,7 +27,7 @@
           <p class="post-info">{{ post.info }}</p>
         </mat-card-content>
         <button mat-raised-button color="primary" (click)="showDetails(post)">
-          +Informações
+          <b>+</b> INFOS
         </button>
       </mat-card>
     </div>
