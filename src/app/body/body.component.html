@@ -2,10 +2,11 @@
   <mat-spinner></mat-spinner>
 </div>
 
-<div class="banner-container">
-  <img src="assets/anitta-banner-2.jpg" alt="Banner" class="banner-img">
+<div *ngIf="!isMobile">
+  <div class="banner-container">
+    <img src="assets/banner-kess.jpg" alt="Banner" class="banner-img" />
+  </div>
 </div>
-
 
 <div *ngIf="!isLoading && posts.length > 0"></div>
 <div *ngFor="let monthYear of monthYearNames">
