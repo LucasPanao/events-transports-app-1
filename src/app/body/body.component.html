@@ -27,7 +27,7 @@
           <p class="post-info">Valor: {{ post.value | currency : "BRL" }}</p>
           <p class="post-info">{{ post.info }}</p>
         </mat-card-content>
-        <button mat-raised-button color="primary" (click)="showDetails(post)">
+        <button mat-raised-button class="btn-bg" (click)="showDetails(post)">
           <b>+</b> INFOS
         </button>
       </mat-card>

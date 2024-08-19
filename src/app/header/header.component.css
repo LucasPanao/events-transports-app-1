@@ -7,6 +7,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  background-color: #0044a7
+}
+
+a {
+  text-decoration: none;
 }
 
 .logo {

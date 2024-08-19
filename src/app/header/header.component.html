@@ -2,7 +2,7 @@
   <button mat-icon-button (click)="toggleMenu()" aria-label="Menu">
     <mat-icon>menu</mat-icon>
   </button>
-  <a mat-button routerLink="/" class="logo">Kess Eventos e Excursões</a>
+  <a routerLink="/" class="logo">Kess Eventos e Excursões</a>
   <span class="spacer"></span>
   <div class="menu-items" [ngClass]="{'menu-open': menuOpen}">
     <a mat-button routerLink="/" (click)="closeMenu()">Excursões</a>

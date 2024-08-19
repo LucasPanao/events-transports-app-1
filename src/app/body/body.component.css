@@ -95,6 +95,11 @@ mat-card img {
   object-fit: cover;
 }
 
+.btn-bg {
+ background-color: #0044a7 !important;
+ color: white;
+}
+
 /* Centralizar os cards em dispositivos móveis */
 @media (max-width: 600px) {
   .grid-container {
