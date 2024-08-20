@@ -38,3 +38,38 @@
     color: white;
   }
   
+  .password-protection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  mat-card {
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .btn-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

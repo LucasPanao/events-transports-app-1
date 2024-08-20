@@ -1,15 +1,33 @@
-<div *ngIf="!accessGranted">
-  <h2>Proteção por Senha</h2>
-  <form (ngSubmit)="checkPassword()">
-    <label for="password">Digite a senha:</label>
-    <input
-      type="password"
-      id="password"
-      [(ngModel)]="enteredPassword"
-      name="password"
-    />
-    <button type="submit">Entrar</button>
-  </form>
+<div *ngIf="!accessGranted" class="password-protection">
+  <mat-card>
+    <h2>Proteção por Senha</h2>
+    <form (ngSubmit)="checkPassword()" #passwordForm="ngForm">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Digite a senha</mat-label>
+        <input
+          matInput
+          type="password"
+          id="password"
+          [(ngModel)]="enteredPassword"
+          name="password"
+          required
+        />
+        <mat-error *ngIf="passwordForm.form.controls['password']?.invalid">
+          A senha é obrigatória
+        </mat-error>
+      </mat-form-field>
+      <div class="btn-container">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="passwordForm.invalid"
+        >
+          Entrar
+        </button>
+      </div>
+    </form>
+  </mat-card>
 </div>
 
 <div *ngIf="accessGranted">
