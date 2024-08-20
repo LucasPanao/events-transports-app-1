@@ -17,12 +17,10 @@ export class BodyComponent implements OnInit {
   monthYearNames: string[] = [];
   isLoading: boolean = true;
   errorMessage: string = '';
-  isMobile: boolean = false;
 
   constructor(public dialog: MatDialog, private postService: PostService) {}
 
   ngOnInit() {
-    this.checkScreenSize();
     this.postService.getPosts().subscribe((data: any) => {
       this.posts = data;
       this.handleMonth();
@@ -32,15 +30,6 @@ export class BodyComponent implements OnInit {
       this.errorMessage = 'Ocorreu um erro ao carregar os eventos. Por favor, tente novamente mais tarde.';
       this.isLoading = false;
     });
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.checkScreenSize();
-  }
-
-  checkScreenSize() {
-    this.isMobile = window.innerWidth <= 768;
   }
 
   showDetails(post: Post): void {

@@ -33,6 +33,7 @@ import { AdminComponent } from './admin/admin.component';
 import { DeletePostComponent } from './delete-post/delete-post.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     AdminComponent,
     DeletePostComponent,
     ConfirmDialogComponent,
-    EditPostComponent
+    EditPostComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

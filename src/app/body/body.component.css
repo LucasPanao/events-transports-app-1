@@ -83,18 +83,6 @@ mat-card img {
   height: 50px;
 }
 
-.banner-container {
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-
-.banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .btn-bg {
  background-color: #0044a7 !important;
  color: white;
