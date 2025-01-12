@@ -33,14 +33,24 @@ export class PhotosComponent {
     dots: true
   }
   
-  title = 'Galeria de Fotos';
+  title = 'GALERIA DE FOTOS';
   images = [
-    {path: './assets/alok.png'},
-    {path: './assets/anitta.png'},
-    {path: './assets/luisa.jpg'},
-    {path: './assets/luan.jpg'},
-    {path: './assets/luan.jpg'},
-    {path: './assets/luan.jpg'},
-    {path: './assets/luan.jpg'}
+    {path: './assets/fotos/foto1.jpg'},
+    {path: './assets/fotos/foto2.jpg'},
+    {path: './assets/fotos/foto3.jpg'},
+    {path: './assets/fotos/foto4.jpg'},
+    {path: './assets/fotos/foto5.jpg'},
+    {path: './assets/fotos/foto6.jpg'},
+    {path: './assets/fotos/foto7.jpg'},
+    {path: './assets/fotos/foto8.jpg'},
+    {path: './assets/fotos/foto9.jpg'},
+    {path: './assets/fotos/foto10.jpg'},
+    {path: './assets/fotos/foto11.jpg'},
+    {path: './assets/fotos/foto12.jpg'},
+    {path: './assets/fotos/foto13.jpg'},
+    {path: './assets/fotos/foto14.jpg'},
+    {path: './assets/fotos/foto15.jpg'},
+    {path: './assets/fotos/foto16.jpg'}
+
   ];
 }
