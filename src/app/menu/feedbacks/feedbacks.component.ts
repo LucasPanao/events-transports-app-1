@@ -35,6 +35,7 @@ export class FeedbacksComponent {
   
   title = 'FEEDBACKS';
   images = [
+    {path: './assets/feedbacks/21.jpg'},
     {path: './assets/feedbacks/1.jpg'},
     {path: './assets/feedbacks/2.jpg'},
     {path: './assets/feedbacks/3.jpg'},
@@ -55,7 +56,6 @@ export class FeedbacksComponent {
     {path: './assets/feedbacks/18.jpg'},
     {path: './assets/feedbacks/19.jpg'},
     {path: './assets/feedbacks/20.jpg'},
-    {path: './assets/feedbacks/21.jpg'},
     {path: './assets/feedbacks/22.jpg'},
   ];
 }

@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -35,6 +36,7 @@ import { DeletePostComponent } from './delete-post/delete-post.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
 import { BannerComponent } from './banner/banner.component';
+import { RefundPolicyComponent } from './menu/refund-policy/refund-policy.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ import { BannerComponent } from './banner/banner.component';
     DeletePostComponent,
     ConfirmDialogComponent,
     EditPostComponent,
-    BannerComponent
+    BannerComponent,
+    RefundPolicyComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,7 @@ import { BannerComponent } from './banner/banner.component';
     MatInputModule,
     MatDialogModule,
     MatProgressSpinnerModule,
+    MatTableModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

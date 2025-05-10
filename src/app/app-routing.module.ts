@@ -10,6 +10,7 @@ import { PostComponent } from './post/post.component';
 import { AdminComponent } from './admin/admin.component';
 import { DeletePostComponent } from './delete-post/delete-post.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { RefundPolicyComponent } from './menu/refund-policy/refund-policy.component';
 
 const routes: Routes = [
   { path: '', component: BodyComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'faq', component: FaqComponent },
+  { path: 'refund-policy', component: RefundPolicyComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'posts', component: PostComponent },
   { path: 'delete-posts', component: DeletePostComponent },

@@ -1,0 +1,32 @@
+<mat-card class="policy-container">
+    <mat-card-title>Política de Reembolso</mat-card-title>
+    <mat-card-content>
+      <ul>
+        <li>O reembolso só é efetuado se solicitado com até <strong>20 dias de antecedência</strong> do evento, devolvendo o valor integral pago (para pagamentos via cartão de crédito, descontamos a taxa).</li>
+        <li>Se não atingirmos a quantidade mínima de 10 pessoas para a excursão, devolveremos o valor integral e avisaremos com <strong>1 semana de antecedência</strong>.</li>
+        <li>Não realizamos reembolso por motivos de saúde, problemas pessoais, viagem, mudança de país ou cancelamento de artista (em caso de festivais).</li>
+        <li>A transferência de crédito para outra excursão deve ser solicitada com <strong>20 dias de antecedência</strong>.</li>
+        <li>Em caso de adiamento do evento, a vaga será automaticamente reagendada para a nova data.</li>
+        <li>Outros casos específicos serão tratados diretamente com o cliente da melhor forma possível.</li>
+      </ul>
+  
+      <p><strong>Normativa da Embratur - Nº 161 de 09/08/1985:</strong></p>
+      <table mat-table [dataSource]="refundRules" class="mat-elevation-z8">
+        <ng-container matColumnDef="percentage">
+          <th mat-header-cell *matHeaderCellDef> Percentual Restituído </th>
+          <td mat-cell *matCellDef="let rule"> {{ rule.percentage }} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="time">
+          <th mat-header-cell *matHeaderCellDef> Prazo Antes da Viagem </th>
+          <td mat-cell *matCellDef="let rule"> {{ rule.time }} </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+      <p class="info">O pagamento da reserva implica automaticamente na ciência das informações.</p>
+    </mat-card-content>
+  </mat-card>
+  
